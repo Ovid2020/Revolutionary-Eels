@@ -4,7 +4,7 @@ public/bundle.*
 server/config/config.js
 node_modules
 # db/config.js
-.env
+# .env
 # Elastic Beanstalk Files
 .ebignore
 .elasticbeanstalk/*
