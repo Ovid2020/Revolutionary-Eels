@@ -3,7 +3,7 @@ public/videocall_refactor.js
 public/bundle.*
 node_modules
 # db/config.js
-.env
+# .env
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
