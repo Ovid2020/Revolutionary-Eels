@@ -1,3 +1,5 @@
+public/videocall_original.js
+public/videocall_refactor.js
 public/bundle.*
 node_modules
 # db/config.js

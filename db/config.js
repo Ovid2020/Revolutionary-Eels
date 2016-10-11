@@ -1,7 +1,7 @@
 var Sequelize = require('sequelize');
 
 //AWS DB CONNECTION
-var connectionString = process.env.CONNECTION_STRING;
+var connectionString = 'mysql://electriceels:electriceels@eelydb.cv2jcsanqh0a.us-west-2.rds.amazonaws.com:3306/eel1';
 
 var connection = new Sequelize(connectionString, {
   pool: {
