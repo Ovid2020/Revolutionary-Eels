@@ -7,7 +7,7 @@ var connection = new Sequelize(connectionString, {
   pool: {
     max: 50,
     min: 1,
-    idle: 1000000
+    idle: 10000
   },
 });
 
@@ -19,3 +19,4 @@ var connection = new Sequelize(connectionString, {
 // var connection = new Sequelize('eels1', 'root');
  
 module.exports = connection;
+

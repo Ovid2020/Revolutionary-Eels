@@ -3,8 +3,12 @@ var sqlConnection = require('../config.js');
 
 var Document = sqlConnection.define('document', 
   { textS3: Sequelize.STRING, 
-    sharelink: Sequelize.STRING }
+    sharelink: Sequelize.STRING ,
+    title: Sequelize.STRING
+  }
 );
 
-Document.sync();
+// Syncing here is redundant. It is already occurring in UserDocument.js.
+//Document.sync();
+
 module.exports = Document;

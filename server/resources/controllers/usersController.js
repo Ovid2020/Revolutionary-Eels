@@ -12,13 +12,26 @@ exports.getUser = function(req, res) {
       if (user !== null) {
         res.send(user);
       } else {
-        res.status(404).send('User not found.');
+        res.send('User not found.');
       }
     })
     .catch(function(error){
       res.status(500).send('Error getting user.');
     });
 };
+
+/**
+ * Oauth
+ * @param {Object} req
+ * @param {Object} res
+ * @return undefined
+ */
+ exports.oauthSuccess = function(req, res) {
+  if (!req.user) { return res.status(404).send({ message: 'Login failed' }); }
+  const user = req.user;
+  const token = req.user;
+  return res.redirect(`/oauthsuccess?token=${token}&firstname=${user.firstname}&lastname=${user.lastname}&username=${user.username}&email=${user.email}`);
+}
 
 /**
  * Create user
