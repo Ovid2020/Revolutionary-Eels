@@ -1,6 +1,6 @@
 // Comment this out for the deployment branch. Enviroment variables
 // are brough in using AWS config settings. 
-require('dotenv').config();
+//require('dotenv').config();
 
 var express = require('express');
 var app = express();
