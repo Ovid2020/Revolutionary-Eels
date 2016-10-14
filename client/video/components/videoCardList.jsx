@@ -9,7 +9,6 @@ const VideoCardList = ({connections, streams}) => {
         return (<VideoCard  stream={ streams[connection.pcKey] } 
                             pcKey={ connection.pcKey } 
                             hangupOnclick= { connection.hangupOnclick }
-                            key={ connection.pcKey } 
                             id={"vidBox___" + connection.pcKey} />)
       }) }
     </div>
