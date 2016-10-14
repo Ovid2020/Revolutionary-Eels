@@ -39,6 +39,7 @@ class AppVideo extends React.Component {
       if (context.props.documentId === signal.documentId){
         if (signal.newUserId != context.props.userId){
           context.activeUsers = signal.activeUsers;
+          console.log("**************USER JOINS DOCUMENT", context.activeUsers);
         }
       }
     });
@@ -48,6 +49,7 @@ class AppVideo extends React.Component {
       var signal = JSON.parse(evt);
       if (context.props.documentId === signal.documentId){
         context.activeUsers = signal.activeUsers;
+        console.log("************ USER LEAVES DOCUMENT", context.activeUsers);
       }
     });
   }
