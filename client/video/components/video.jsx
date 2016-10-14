@@ -132,6 +132,7 @@ class AppVideo extends React.Component {
       // Loop through all the calls this active user needs to make. Once this has run for all users in the document, there will be 
       // a p2p connection between all peers, identified by the pcKey (formatted as 'callerId---calleeId').
       if (myCallsToMake !== undefined) {
+        console.log("MY CALLS TO MAKE: ", myCallsToMake);
         myCallsToMake.forEach(function(pcKey, i){
           setTimeout(function(){
             // Providing a delay between connections allows the browser to process all ICE protocol steps without bottlenecking. 
@@ -290,6 +291,7 @@ class AppVideo extends React.Component {
   // via websockets. 
   initConferenceCall(){
     var meshGrid = this.createMeshGrid(this.activeUsers);
+    console.log("MESHGRID IS: ", meshGrid);
     signalingChannel.emit('signal conference call', JSON.stringify({"meshGrid": meshGrid}));
   }
 
