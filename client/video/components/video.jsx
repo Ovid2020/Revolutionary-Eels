@@ -100,7 +100,9 @@ class AppVideo extends React.Component {
     // to reconnect with a new call immediately after closing the current one. 
     signalingChannel.on('disconnect call', function(evt){
       var signal = JSON.parse(evt);
-      context.pcs[signal.pcKey] ? context.pcs[signal.pcKey].close() : null;
+      if (context.pcs[signal.pcKey] !== undefined) {
+        context.pcs[signal.pcKey].close();
+      }
       // If the call was rejected, dispatch actions to hide call alerts.
       if (signal.isHangup) {
         if (this.isCaller) {
